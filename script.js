@@ -13,7 +13,7 @@ function getuserinfo() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
-            console.log(data.asn.asn);
+            console.log(data.org);
             let [lat, long] = data.loc.split(",");
             let timezone = data.timezone;
             let pincode = data.postal;
@@ -45,7 +45,7 @@ function showInfoAndMap(lat, long, data) {
     <li>Region: ${data.region}</li>
     </ul>
     <ul >
-    <li>Organisation: ${data.asn.asn}</li>
+    <li>Organisation: ${data.org}</li>
     <li>Hostname: ${data.hostname}</li>
     </ul >`;
 
